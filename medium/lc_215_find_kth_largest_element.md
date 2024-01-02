@@ -25,7 +25,7 @@ Can you solve it without sorting?
 **Constraints**:
 
 - `1 <= k <= nums.length <= 10^5`
-- `-104 <= nums[i] <= 10^4`
+- `-10^4 <= nums[i] <= 10^4`
 
 **Solution**:
 
