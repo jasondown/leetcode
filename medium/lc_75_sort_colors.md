@@ -33,11 +33,11 @@ You must solve this problem without using the library's sort function.
 
 ```python
 class Solution:
+
     def sortColors(self, nums: List[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
-        # one pass solution using two pointers
+        # one pass partition solution using two pointers 
+        # (well three if you include the swap pointer)
+
         lp, rp, sp = 0, len(nums) - 1, 0 # left, right, swap pointers
 
         while sp <= rp:
@@ -73,7 +73,7 @@ assert input2 == expected2
 
 Use a similar approach to the partitioning portion of a quick-sort algorithm, to allow a single pass.
 
-- **Pointers**: The use of two pointers, low and high, efficiently partitions the array into three sections: red, white, and blue.
+- **Pointers**: The use of two pointers, `lp` and `rp`, efficiently partitions the array into three sections: red, white, and blue.
 - **Single Pass**: The array is traversed only once, making it efficient in terms of time complexity.
 - **Swapping**: Elements are swapped only when necessary, ensuring in-place sorting.
 - **White Element Handling**: White elements are left in their correct positions as the pointers move towards each other.
@@ -86,11 +86,10 @@ Use a similar approach to the partitioning portion of a quick-sort algorithm, to
 
 ```python
 class Solution(object):
+    
     def sortColors(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: None Do not return anything, modify nums in-place instead.
-        """
+        # Two pass solution couting frequencies
+
         counts = [0] * 3  # Counter for each color (0, 1, 2)
         for num in nums:
             counts[num] += 1
