@@ -40,7 +40,7 @@ You can return the answer in any order.
 
 **Solution**:
 
-We can iterate over the `nums` and store the values in a hashmap, using `key=num, val=array_index`. Rather than storing them all up front, as we iterate, we check if `target - current_num` is in the hashmap. If so, we return the current index and the hasmap value (index of the required num).
+We can iterate over the `nums` and store the values in a hashmap, using `key=num, val=array_index`. Rather than storing them all up front, as we iterate, we check if `target - current_num` is in the hashmap. If so, we return the current index and the hashmap value (index of the required num).
 
 ```python
 from typing import List

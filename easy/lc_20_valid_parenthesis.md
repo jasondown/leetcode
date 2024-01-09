@@ -37,7 +37,7 @@ An input string is valid if:
 
 **Solution**
 
-Can store closing to to opening parenthesis pairs as a hashmap. Can use a stack to store the inputs. If we have a closing paranthesis, check if the stack is the matching opening one. If not, return False. If true, pop the stack. Else, if we have an opening parenthesis, append it to the stack.
+Can store closing to opening parenthesis pairs as a hashmap. Can use a stack to store the inputs. If we have a closing paranthesis, check if the stack is the matching opening one. If not, return False. If true, pop the stack. Else, if we have an opening parenthesis, append it to the stack.
 
 At the end, if our stack is empty, return true.
 
